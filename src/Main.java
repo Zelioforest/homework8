@@ -1,5 +1,6 @@
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
+import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
 
@@ -16,7 +17,7 @@ public class Main {
         for (int i = 0; i < 10; i++) {
             doubleArray[i] = (i + 1) * 0.5;
         }
-        System.out.println( doubleArray);
+        System.out.println(doubleArray);
 
         System.out.println();
 
@@ -72,17 +73,11 @@ public class Main {
 
         // task 4
         System.out.println("Задание № 4");
-        for (int i = 0; i < intArray.length - 1; ++i) {
-            if (intArray[i] % 2 == 0) {
-                System.out.print(intArray[i] + ", ");
-            } else {
-                System.out.print(intArray[i] + 1 + ", ");
+        for (int i = 0; i < intArray.length; ++i) {
+            if (intArray[i] % 2 != 0) {
+                intArray[i] = intArray[i] + 1;
             }
         }
-        if (intArray[intArray.length - 1] % 2 == 0) {
-            System.out.println(intArray[intArray.length - 1]);
-        } else {
-            System.out.println(intArray[intArray.length - 1] + 1);
-        }
+        System.out.println(Arrays.toString(intArray));
     }
 }
